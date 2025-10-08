@@ -28,9 +28,6 @@ void setup() {
 void loop() {
   vout = (analogRead(A0) * 5.0) / 1024.0;
   vin = vout / (R2 / (R1 + R2));
-  // if (vin < 0.09) {
-  //   vin = 0.0;
-  // }
 
   if (vin < 5) {
     digitalWrite(Buzzer, HIGH);
